@@ -28,4 +28,8 @@ Para probar el proyecto localmente, sigue estos pasos:
 
 Quiero agradecer a Nerdearla por la invitación a este hermoso evento, mi primer evento internacional.
 
+## Mi Canal de YouTube:
+
+[YouTube: Sergie Code](https://www.youtube.com/@SergieCode)
+
 Sergie Code
