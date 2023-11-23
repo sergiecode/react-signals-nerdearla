@@ -5,7 +5,7 @@ const apellido = signal('con Signals')
 
 const nombreCompleto = computed(() => `${nombre.value} ${apellido.value}`)
 
-effect(() => console.log(nombreCompleto.value))
+effect(() => console.log('Desde solapa BATCH: ',nombreCompleto.value))
 
 const onClick = () => {
     batch(() => {
@@ -17,9 +17,13 @@ const onClick = () => {
 export const Batch = () => {
     return (
         <>
-            <h1>Effect y Batch</h1>
-            <h6>Mirá en consola</h6>
-            <button onClick={onClick}>Hacer acción en bloque</button>
+            <div className="container mt-5">
+                <h1 className="display-4">Effect y Batch</h1>
+                <p className="lead">Mirá en consola</p>
+                <button className="btn btn-primary" onClick={onClick}>
+                    Hacer acción en bloque
+                </button>
+            </div>
         </>
     )
 }
