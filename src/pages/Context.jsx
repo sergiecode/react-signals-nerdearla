@@ -16,14 +16,28 @@ export const Context = () => {
   }
   return (
     <>
-      <h1>Context</h1>
-      <p>Contexto A: {variableDesdeProviderA}</p>
-      <p>Contexto B: {variableDesdeProviderB}</p>
-      <p>Computada: {variableComputada}</p>
-
-      <button onClick={() => cambiarVariableDesdeProviderA()}>Cambiar variable desde Provider A</button>
-      <button onClick={() => cambiarVariableDesdeProviderB()}>Cambiar variable desde Provider B</button>
-
+      <div className="container">
+        <h1 className="mt-5">Context</h1>
+        <div className="row">
+          <div className="col-md-6">
+            <p>Contexto A: {variableDesdeProviderA}</p>
+            <button className="btn btn-primary" onClick={() => cambiarVariableDesdeProviderA()}>
+              Cambiar variable desde Provider A
+            </button>
+          </div>
+          <div className="col-md-6">
+            <p>Contexto B: {variableDesdeProviderB}</p>
+            <button className="btn btn-success" onClick={() => cambiarVariableDesdeProviderB()}>
+              Cambiar variable desde Provider B
+            </button>
+          </div>
+        </div>
+        <div className="row mt-3">
+          <div className="col-md-12">
+            <p>Computada: {variableComputada}</p>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

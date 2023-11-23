@@ -9,12 +9,14 @@ const tareas = signal([
 const descripcion = signal('')
 
 function agregarTarea() {
-    tareas.value = [...tareas.value, { descripcion: descripcion.value, completada: false }]
+    if (descripcion.value === '') return
+    const newID = tareas.value[tareas.value.length - 1] ? tareas.value[tareas.value.length - 1].id + 1 : 1
+    tareas.value = [...tareas.value, { id: newID, descripcion: descripcion.value, completada: false }]
     descripcion.value = ''
 }
 
 function borrarTarea(tarea) {
-    tareas.value = tareas.value.filter(t => t !== tarea)
+    tareas.value = tareas.value.filter(t => t.id !== tarea.id);
 }
 
 const completadas = computed(() => tareas.value.filter(t => t.completada))
