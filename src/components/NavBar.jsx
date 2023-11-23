@@ -1,6 +1,5 @@
 
 import { NavLink } from "react-router-dom"
-import { useContext } from "react"
 
 
 export const NavBar = () => {
@@ -30,6 +29,9 @@ export const NavBar = () => {
                         </li>
                         <li className="nav-item">
                             <NavLink to='/batch' className="nav-link active">Batch y Effect</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to='/context' className="nav-link active">Context</NavLink>
                         </li>
                     </ul>
                 </div>
